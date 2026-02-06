@@ -1,645 +1,108 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Die Golem-Pipeline: Von Kabbalah zu KI — Dokumentierte Verbindungen</title>
-<meta name="description" content="Von Rabbi Loews Golem über Marvin Minsky zu Jeffrey Epsteins Bitcoin-Netzwerk. Eine dokumentierte Timeline basierend auf DOJ-Dateien und MIT-Berichten.">
-
-<!-- Open Graph / Facebook -->
+<title>The Golem Pipeline: From Kabbalah to AI — Documented Connections</title>
+<meta name="description" content="From Rabbi Loew's Golem to Marvin Minsky to Jeffrey Epstein's Bitcoin network. A documented timeline based on DOJ files and MIT reports.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Die Golem-Pipeline: Von Kabbalah zu KI">
-<meta property="og:description" content="Marvin Minsky — Vater der KI — behauptete Nachkomme des Golem-Schöpfers Rabbi Loew zu sein. Epstein finanzierte seine Forschung. Alle Fakten dokumentiert.">
+<meta property="og:title" content="The Golem Pipeline: From Kabbalah to AI">
+<meta property="og:description" content="Marvin Minsky — father of AI — claimed descent from the Golem creator Rabbi Loew. Epstein funded his research. 74.8% of Bitcoin code committed under Epstein's patronage. All documented.">
 <meta property="og:image" content="https://i.imgur.com/placeholder.png">
 <meta property="og:url" content="">
-
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Die Golem-Pipeline: Von Kabbalah zu KI">
-<meta name="twitter:description" content="Minsky — Vater der KI & Nachkomme des Golem-Schöpfers — finanziert von Epstein. 74.8% des Bitcoin-Codes committed unter Epsteins Förderung. Alles dokumentiert.">
+<meta name="twitter:title" content="The Golem Pipeline: From Kabbalah to AI">
+<meta name="twitter:description" content="Minsky — father of AI & descendant of the Golem creator — funded by Epstein. 74.8% of Bitcoin code committed under Epstein's patronage. Fully sourced.">
 <meta name="twitter:image" content="https://i.imgur.com/placeholder.png">
-
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✡</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --gold: #c9a84c;
-    --gold-dim: #8a6d2b;
-    --blood: #8b1a1a;
-    --blood-glow: #cc2222;
-    --dark: #0a0a0c;
-    --darker: #050507;
-    --parchment: #d4c5a0;
-    --parchment-dim: #a89870;
-    --text: #e8e0d0;
-    --text-dim: #9a9080;
-    --mystic: #2a1a3a;
-    --mystic-glow: #6a3a8a;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    background: var(--darker);
-    color: var(--text);
-    font-family: 'Crimson Pro', Georgia, serif;
-    overflow-x: hidden;
-    min-height: 100vh;
-  }
-
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none;
-    z-index: 1000;
-  }
-
-  a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(201,168,76,0.3); transition: border-color 0.2s; }
-  a:hover { border-color: var(--gold); }
-
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 24px;
-    position: relative;
-  }
-
-  /* ─── SHARE BAR ─── */
-  .share-bar {
-    position: fixed;
-    bottom: 24px;
-    right: 24px;
-    z-index: 999;
-    display: flex;
-    gap: 10px;
-  }
-
-  .share-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 20px;
-    border: 1px solid rgba(201,168,76,0.3);
-    background: rgba(10,10,12,0.95);
-    color: var(--gold);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(201,168,76,0.3);
-  }
-
-  .share-btn:hover {
-    background: rgba(201,168,76,0.1);
-    border-color: var(--gold);
-    transform: translateY(-2px);
-  }
-
-  .share-btn svg {
-    width: 16px;
-    height: 16px;
-    fill: currentColor;
-  }
-
-  /* ─── HEADER ─── */
-  .header {
-    text-align: center;
-    padding: 60px 0 50px;
-    position: relative;
-  }
-
-  .header::before {
-    content: '✡';
-    font-size: 80px;
-    display: block;
-    color: var(--gold);
-    opacity: 0.15;
-    margin-bottom: -20px;
-    animation: pulse-glow 4s ease-in-out infinite;
-  }
-
-  @keyframes pulse-glow {
-    0%, 100% { opacity: 0.1; filter: blur(0px); }
-    50% { opacity: 0.25; filter: blur(1px); }
-  }
-
-  .header h1 {
-    font-family: 'Cinzel', serif;
-    font-weight: 900;
-    font-size: clamp(2rem, 5vw, 3.2rem);
-    color: var(--gold);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    line-height: 1.2;
-    text-shadow: 0 0 40px rgba(201, 168, 76, 0.3);
-  }
-
-  .header .subtitle {
-    font-family: 'Crimson Pro', serif;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 1.15rem;
-    color: var(--parchment-dim);
-    margin-top: 16px;
-    letter-spacing: 0.05em;
-  }
-
-  .header .disclaimer {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.65rem;
-    color: var(--text-dim);
-    margin-top: 24px;
-    padding: 8px 16px;
-    border: 1px solid rgba(201, 168, 76, 0.15);
-    display: inline-block;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  /* ─── TIMELINE SPINE ─── */
-  .timeline {
-    position: relative;
-    padding: 20px 0;
-  }
-
-  .timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(
-      to bottom,
-      transparent,
-      var(--gold-dim) 10%,
-      var(--gold) 30%,
-      var(--blood) 60%,
-      var(--blood-glow) 80%,
-      transparent
-    );
-    transform: translateX(-50%);
-  }
-
-  /* ─── NODE ─── */
-  .node {
-    position: relative;
-    margin: 50px 0;
-    display: flex;
-    align-items: flex-start;
-    opacity: 0;
-    animation: fadeSlideIn 0.8s ease forwards;
-  }
-
-  .node:nth-child(1) { animation-delay: 0.2s; }
-  .node:nth-child(2) { animation-delay: 0.5s; }
-  .node:nth-child(3) { animation-delay: 0.8s; }
-  .node:nth-child(4) { animation-delay: 1.1s; }
-  .node:nth-child(5) { animation-delay: 1.4s; }
-  .node:nth-child(6) { animation-delay: 1.7s; }
-
-  @keyframes fadeSlideIn {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .node-marker {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    z-index: 10;
-    top: 24px;
-  }
-
-  .node-marker.era-ancient {
-    background: var(--gold);
-    box-shadow: 0 0 20px rgba(201, 168, 76, 0.6);
-  }
-  .node-marker.era-modern {
-    background: var(--mystic-glow);
-    box-shadow: 0 0 20px rgba(106, 58, 138, 0.6);
-  }
-  .node-marker.era-dark {
-    background: var(--blood);
-    box-shadow: 0 0 20px rgba(139, 26, 26, 0.6);
-  }
-
-  .node-content {
-    width: 42%;
-    padding: 24px;
-    position: relative;
-  }
-
-  .node:nth-child(odd) .node-content {
-    margin-right: auto;
-    text-align: right;
-    padding-right: 50px;
-  }
-
-  .node:nth-child(even) .node-content {
-    margin-left: auto;
-    text-align: left;
-    padding-left: 50px;
-  }
-
-  .node-year {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.75rem;
-    color: var(--gold);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin-bottom: 6px;
-  }
-
-  .node-title {
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-    font-size: 1.3rem;
-    color: var(--parchment);
-    margin-bottom: 10px;
-    line-height: 1.3;
-  }
-
-  .node-body {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    color: var(--text-dim);
-    font-weight: 300;
-  }
-
-  .node-body strong {
-    color: var(--text);
-    font-weight: 600;
-  }
-
-  .source-link {
-    display: inline-block;
-    margin-top: 8px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.6rem;
-    color: var(--gold-dim);
-    border: 1px solid rgba(201, 168, 76, 0.2) !important;
-    border-bottom: 1px solid rgba(201, 168, 76, 0.2) !important;
-    padding: 2px 8px;
-    letter-spacing: 0.05em;
-    transition: all 0.2s;
-  }
-
-  .source-link:hover {
-    color: var(--gold);
-    border-color: rgba(201, 168, 76, 0.5) !important;
-    background: rgba(201,168,76,0.05);
-  }
-
-  /* ─── CONNECTION CARDS ─── */
-  .connections {
-    margin: 80px 0 40px;
-    text-align: center;
-  }
-
-  .connections h2 {
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-    font-size: 1.6rem;
-    color: var(--blood-glow);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-  }
-
-  .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-  }
-
-  .card {
-    background: linear-gradient(135deg, rgba(42, 26, 58, 0.4), rgba(10, 10, 12, 0.8));
-    border: 1px solid rgba(201, 168, 76, 0.12);
-    padding: 28px 24px;
-    text-align: left;
-    position: relative;
-    overflow: hidden;
-    transition: border-color 0.3s, transform 0.3s;
-  }
-
-  .card:hover {
-    border-color: rgba(201, 168, 76, 0.4);
-    transform: translateY(-3px);
-  }
-
-  .card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 3px;
-    height: 100%;
-  }
-
-  .card.card-money::before { background: var(--gold); }
-  .card.card-network::before { background: var(--mystic-glow); }
-  .card.card-code::before { background: var(--blood-glow); }
-
-  .card-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.6rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-
-  .card.card-money .card-label { color: var(--gold); }
-  .card.card-network .card-label { color: var(--mystic-glow); }
-  .card.card-code .card-label { color: var(--blood-glow); }
-
-  .card-stat {
-    font-family: 'Cinzel', serif;
-    font-size: 2rem;
-    font-weight: 900;
-    color: var(--parchment);
-    margin-bottom: 6px;
-  }
-
-  .card-desc {
-    font-size: 0.85rem;
-    color: var(--text-dim);
-    line-height: 1.5;
-    font-weight: 300;
-  }
-
-  /* ─── SOURCES SECTION ─── */
-  .sources {
-    margin: 60px 0 20px;
-    padding: 30px;
-    border: 1px solid rgba(201,168,76,0.1);
-    background: rgba(10,10,12,0.5);
-  }
-
-  .sources h3 {
-    font-family: 'Cinzel', serif;
-    font-size: 1rem;
-    color: var(--gold);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-  }
-
-  .sources ol {
-    list-style: none;
-    counter-reset: src;
-  }
-
-  .sources li {
-    counter-increment: src;
-    margin-bottom: 12px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    color: var(--text-dim);
-    line-height: 1.6;
-    padding-left: 30px;
-    position: relative;
-  }
-
-  .sources li::before {
-    content: '[' counter(src) ']';
-    position: absolute;
-    left: 0;
-    color: var(--gold-dim);
-  }
-
-  .sources li a {
-    color: var(--parchment-dim);
-    word-break: break-all;
-  }
-
-  .sources li a:hover {
-    color: var(--gold);
-  }
-
-  /* ─── BOTTOM QUOTE ─── */
-  .closing {
-    text-align: center;
-    padding: 60px 20px;
-    border-top: 1px solid rgba(201, 168, 76, 0.1);
-    margin-top: 20px;
-  }
-
-  .closing blockquote {
-    font-family: 'Crimson Pro', serif;
-    font-style: italic;
-    font-size: 1.3rem;
-    color: var(--parchment);
-    max-width: 600px;
-    margin: 0 auto 16px;
-    line-height: 1.6;
-    font-weight: 300;
-  }
-
-  .closing .attribution {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem;
-    color: var(--gold-dim);
-    letter-spacing: 0.1em;
-  }
-
-  .footer-note {
-    margin-top: 50px;
-    padding: 20px;
-    border: 1px solid rgba(139, 26, 26, 0.3);
-    background: rgba(139, 26, 26, 0.05);
-    text-align: center;
-  }
-
-  .footer-note p {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.65rem;
-    color: var(--text-dim);
-    letter-spacing: 0.05em;
-    line-height: 1.8;
-  }
-
-  /* ─── RESPONSIVE ─── */
-  @media (max-width: 700px) {
-    .timeline::before { left: 20px; }
-    .node-marker { left: 20px; }
-    .node-content {
-      width: 100% !important;
-      margin-left: 50px !important;
-      text-align: left !important;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-    }
-    .share-bar {
-      bottom: 12px;
-      right: 12px;
-      flex-direction: column;
-    }
-    .share-btn { padding: 10px 14px; font-size: 0.6rem; }
-  }
+:root{--gold:#c9a84c;--gold-dim:#8a6d2b;--blood:#8b1a1a;--blood-glow:#cc2222;--dark:#0a0a0c;--darker:#050507;--parchment:#d4c5a0;--parchment-dim:#a89870;--text:#e8e0d0;--text-dim:#9a9080;--mystic:#2a1a3a;--mystic-glow:#6a3a8a}*{margin:0;padding:0;box-sizing:border-box}body{background:var(--darker);color:var(--text);font-family:'Crimson Pro',Georgia,serif;overflow-x:hidden;min-height:100vh}body::before{content:'';position:fixed;top:0;left:0;right:0;bottom:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:1000}a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,76,.3);transition:border-color .2s}a:hover{border-color:var(--gold)}.container{max-width:900px;margin:0 auto;padding:40px 24px;position:relative}.share-bar{position:fixed;bottom:24px;right:24px;z-index:999;display:flex;gap:10px}.share-btn{display:flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid rgba(201,168,76,.3);background:rgba(10,10,12,.95);color:var(--gold);font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .3s;text-decoration:none;border-bottom:1px solid rgba(201,168,76,.3)}.share-btn:hover{background:rgba(201,168,76,.1);border-color:var(--gold);transform:translateY(-2px)}.share-btn svg{width:16px;height:16px;fill:currentColor}.header{text-align:center;padding:60px 0 50px;position:relative}.header::before{content:'✡';font-size:80px;display:block;color:var(--gold);opacity:.15;margin-bottom:-20px;animation:pulse-glow 4s ease-in-out infinite}@keyframes pulse-glow{0%,100%{opacity:.1;filter:blur(0)}50%{opacity:.25;filter:blur(1px)}}.header h1{font-family:'Cinzel',serif;font-weight:900;font-size:clamp(2rem,5vw,3.2rem);color:var(--gold);letter-spacing:.15em;text-transform:uppercase;line-height:1.2;text-shadow:0 0 40px rgba(201,168,76,.3)}.header .subtitle{font-family:'Crimson Pro',serif;font-style:italic;font-weight:300;font-size:1.15rem;color:var(--parchment-dim);margin-top:16px;letter-spacing:.05em}.header .disclaimer{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--text-dim);margin-top:24px;padding:8px 16px;border:1px solid rgba(201,168,76,.15);display:inline-block;letter-spacing:.08em;text-transform:uppercase}.timeline{position:relative;padding:20px 0}.timeline::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,transparent,var(--gold-dim) 10%,var(--gold) 30%,var(--blood) 60%,var(--blood-glow) 80%,transparent);transform:translateX(-50%)}.node{position:relative;margin:50px 0;display:flex;align-items:flex-start;opacity:0;animation:fadeSlideIn .8s ease forwards}.node:nth-child(1){animation-delay:.2s}.node:nth-child(2){animation-delay:.5s}.node:nth-child(3){animation-delay:.8s}.node:nth-child(4){animation-delay:1.1s}.node:nth-child(5){animation-delay:1.4s}.node:nth-child(6){animation-delay:1.7s}@keyframes fadeSlideIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}.node-marker{position:absolute;left:50%;transform:translateX(-50%);width:18px;height:18px;border-radius:50%;z-index:10;top:24px}.node-marker.era-ancient{background:var(--gold);box-shadow:0 0 20px rgba(201,168,76,.6)}.node-marker.era-modern{background:var(--mystic-glow);box-shadow:0 0 20px rgba(106,58,138,.6)}.node-marker.era-dark{background:var(--blood);box-shadow:0 0 20px rgba(139,26,26,.6)}.node-content{width:42%;padding:24px;position:relative}.node:nth-child(odd) .node-content{margin-right:auto;text-align:right;padding-right:50px}.node:nth-child(even) .node-content{margin-left:auto;text-align:left;padding-left:50px}.node-year{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px}.node-title{font-family:'Cinzel',serif;font-weight:700;font-size:1.3rem;color:var(--parchment);margin-bottom:10px;line-height:1.3}.node-body{font-size:.95rem;line-height:1.7;color:var(--text-dim);font-weight:300}.node-body strong{color:var(--text);font-weight:600}.source-link{display:inline-block;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--gold-dim);border:1px solid rgba(201,168,76,.2)!important;border-bottom:1px solid rgba(201,168,76,.2)!important;padding:2px 8px;letter-spacing:.05em;transition:all .2s}.source-link:hover{color:var(--gold);border-color:rgba(201,168,76,.5)!important;background:rgba(201,168,76,.05)}.connections{margin:80px 0 40px;text-align:center}.connections h2{font-family:'Cinzel',serif;font-weight:700;font-size:1.6rem;color:var(--blood-glow);letter-spacing:.1em;text-transform:uppercase;margin-bottom:40px}.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}.card{background:linear-gradient(135deg,rgba(42,26,58,.4),rgba(10,10,12,.8));border:1px solid rgba(201,168,76,.12);padding:28px 24px;text-align:left;position:relative;overflow:hidden;transition:border-color .3s,transform .3s}.card:hover{border-color:rgba(201,168,76,.4);transform:translateY(-3px)}.card::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%}.card.card-money::before{background:var(--gold)}.card.card-network::before{background:var(--mystic-glow)}.card.card-code::before{background:var(--blood-glow)}.card-label{font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:10px}.card.card-money .card-label{color:var(--gold)}.card.card-network .card-label{color:var(--mystic-glow)}.card.card-code .card-label{color:var(--blood-glow)}.card-stat{font-family:'Cinzel',serif;font-size:2rem;font-weight:900;color:var(--parchment);margin-bottom:6px}.card-desc{font-size:.85rem;color:var(--text-dim);line-height:1.5;font-weight:300}.sources{margin:60px 0 20px;padding:30px;border:1px solid rgba(201,168,76,.1);background:rgba(10,10,12,.5)}.sources h3{font-family:'Cinzel',serif;font-size:1rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px}.sources ol{list-style:none;counter-reset:src}.sources li{counter-increment:src;margin-bottom:12px;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--text-dim);line-height:1.6;padding-left:30px;position:relative}.sources li::before{content:'[' counter(src) ']';position:absolute;left:0;color:var(--gold-dim)}.sources li a{color:var(--parchment-dim);word-break:break-all}.sources li a:hover{color:var(--gold)}.closing{text-align:center;padding:60px 20px;border-top:1px solid rgba(201,168,76,.1);margin-top:20px}.closing blockquote{font-family:'Crimson Pro',serif;font-style:italic;font-size:1.3rem;color:var(--parchment);max-width:600px;margin:0 auto 16px;line-height:1.6;font-weight:300}.closing .attribution{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--gold-dim);letter-spacing:.1em}.footer-note{margin-top:50px;padding:20px;border:1px solid rgba(139,26,26,.3);background:rgba(139,26,26,.05);text-align:center}.footer-note p{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--text-dim);letter-spacing:.05em;line-height:1.8}@media(max-width:700px){.timeline::before{left:20px}.node-marker{left:20px}.node-content{width:100%!important;margin-left:50px!important;text-align:left!important;padding-left:0!important;padding-right:0!important}.share-bar{bottom:12px;right:12px;flex-direction:column}.share-btn{padding:10px 14px;font-size:.6rem}}
 </style>
 </head>
 <body>
-
-<!-- SHARE BAR -->
 <div class="share-bar">
   <a class="share-btn" id="shareX" href="#" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-    Auf X teilen
+    Share on X
   </a>
-  <a class="share-btn" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Kopiert!';setTimeout(()=>this.innerHTML='🔗 Link kopieren',2000)" href="javascript:void(0)">
-    🔗 Link kopieren
+  <a class="share-btn" id="copyLink" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ Copied!';setTimeout(()=>this.innerHTML='🔗 Copy link',2000)" href="javascript:void(0)">
+    🔗 Copy link
   </a>
 </div>
-
 <div class="container">
-
   <header class="header">
-    <h1>Die Golem-Pipeline</h1>
-    <p class="subtitle">Von kabbalistischer Schöpfung zur künstlichen Intelligenz — eine dokumentierte Linie</p>
-    <span class="disclaimer">Basierend auf DOJ-Dokumenten, MIT-Berichten & öffentlichen Quellen — Alle Quellen verlinkt</span>
+    <h1>The Golem Pipeline</h1>
+    <p class="subtitle">From Kabbalistic creation to artificial intelligence — a documented lineage</p>
+    <span class="disclaimer">Based on DOJ documents, MIT reports & public sources — All sources linked</span>
   </header>
-
-  <!-- TIMELINE -->
   <section class="timeline">
-
     <div class="node">
       <div class="node-marker era-ancient"></div>
       <div class="node-content">
         <div class="node-year">1525 – 1609</div>
-        <div class="node-title">Rabbi Judah Loew<br>Der Maharal von Prag</div>
-        <div class="node-body">
-          Der berühmteste Kabbalist der Geschichte erschafft den <strong>Golem</strong> — ein künstliches Wesen aus Erde, zum Leben erweckt durch eine heilige Beschwörungsformel. Es war geschaffen um die jüdische Gemeinde zu schützen, geriet aber außer Kontrolle.
-          <br><a class="source-link" href="https://en.wikipedia.org/wiki/Judah_Loew_ben_Bezalel" target="_blank" rel="noopener">[1] Wikipedia: Judah Loew</a>
-        </div>
+        <div class="node-title">Rabbi Judah Loew<br>The Maharal of Prague</div>
+        <div class="node-body">The most famous Kabbalist in history creates the <strong>Golem</strong> — an artificial being made from clay, brought to life through a sacred incantation. Built to protect the Jewish community, it spiraled beyond control.<br><a class="source-link" href="https://en.wikipedia.org/wiki/Judah_Loew_ben_Bezalel" target="_blank" rel="noopener">[1] Wikipedia: Judah Loew</a></div>
       </div>
     </div>
-
     <div class="node">
       <div class="node-marker era-ancient"></div>
       <div class="node-content">
-        <div class="node-year">~1940er — Bar-Mitzwa</div>
-        <div class="node-title">Die Beschwörung wird weitergegeben</div>
-        <div class="node-body">
-          Bei seiner Bar-Mitzwa erzählt <strong>Marvin Minskys Großvater</strong> ihm, er sei ein direkter Nachkomme von Rabbi Loew — und gibt ihm die Golem-Beschwörung weiter. Dieselbe Geschichte wird unabhängig auch Joel Moses erzählt. Beide schreiben die identische Formel auf.
-          <br><a class="source-link" href="https://swarajyamag.com/books/the-golem-and-artificial-intelligence-a-churning-of-folklore-and-science" target="_blank" rel="noopener">[2] Swarajya: The Golem and AI</a>
-          <br><a class="source-link" href="https://forward.com/culture/film-tv/398389/the-secret-jewish-history-of-2001-a-space-odyssey/" target="_blank" rel="noopener">[3] Forward: Secret Jewish History of 2001</a>
-        </div>
+        <div class="node-year">~1940s — Bar Mitzvah</div>
+        <div class="node-title">The Incantation Is Passed Down</div>
+        <div class="node-body">At his Bar Mitzvah, <strong>Marvin Minsky's grandfather</strong> tells him he is a direct descendant of Rabbi Loew — and passes down the Golem incantation. The same story is independently told to Joel Moses. Both write down the identical formula.<br><a class="source-link" href="https://swarajyamag.com/books/the-golem-and-artificial-intelligence-a-churning-of-folklore-and-science" target="_blank" rel="noopener">[2] Swarajya: The Golem and AI</a><br><a class="source-link" href="https://forward.com/culture/film-tv/398389/the-secret-jewish-history-of-2001-a-space-odyssey/" target="_blank" rel="noopener">[3] Forward: Secret Jewish History of 2001</a></div>
       </div>
     </div>
-
     <div class="node">
       <div class="node-marker era-modern"></div>
       <div class="node-content">
         <div class="node-year">1959 — MIT</div>
-        <div class="node-title">Der Golem wird digital</div>
-        <div class="node-body">
-          Marvin Minsky — Nachkomme des Golem-Schöpfers — gründet das <strong>MIT Artificial Intelligence Laboratory</strong>. Er baut die erste neuronale Netzwerk-Lernmaschine (SNARC), erfindet das Head-Mounted Display, und wird zum „Vater der KI". Er berät Stanley Kubrick bei <strong>HAL 9000</strong> — dem filmischen Golem.
-          <br><a class="source-link" href="https://en.wikipedia.org/wiki/Marvin_Minsky" target="_blank" rel="noopener">[4] Wikipedia: Marvin Minsky</a>
-        </div>
+        <div class="node-title">The Golem Goes Digital</div>
+        <div class="node-body">Marvin Minsky — descendant of the Golem creator — founds the <strong>MIT Artificial Intelligence Laboratory</strong>. He builds the first neural network learning machine (SNARC), invents the head-mounted display, and becomes the "father of AI." He advises Kubrick on <strong>HAL 9000</strong> — the cinematic Golem.<br><a class="source-link" href="https://en.wikipedia.org/wiki/Marvin_Minsky" target="_blank" rel="noopener">[4] Wikipedia: Marvin Minsky</a></div>
       </div>
     </div>
-
     <div class="node">
       <div class="node-marker era-dark"></div>
       <div class="node-content">
-        <div class="node-year">2002 — Die Verbindung</div>
-        <div class="node-title">Epstein finanziert Minsky</div>
-        <div class="node-body">
-          Jeffrey Epstein spendet <strong>$100.000</strong> an MIT für Minskys Forschung — seine erste dokumentierte Spende ans Institut. Minsky wird auf Epsteins Insel eingeladen. Fluglogdaten zeigen ihn neben Epstein und <strong>Ghislaine Maxwell</strong>.
-          <br><a class="source-link" href="https://news.mit.edu/2020/mit-releases-results-fact-finding-report-jeffrey-epstein-0110" target="_blank" rel="noopener">[5] MIT: Goodwin Procter Report</a>
-          <br><a class="source-link" href="https://epsteinweb.org/marvin-minsky/" target="_blank" rel="noopener">[6] Epstein Web Tracker: Minsky</a>
-        </div>
+        <div class="node-year">2002 — The Connection</div>
+        <div class="node-title">Epstein Funds Minsky</div>
+        <div class="node-body">Jeffrey Epstein donates <strong>$100,000</strong> to MIT for Minsky's research — his earliest documented gift to the institute. Minsky is invited to Epstein's island. Flight logs place him alongside Epstein and <strong>Ghislaine Maxwell</strong>.<br><a class="source-link" href="https://news.mit.edu/2020/mit-releases-results-fact-finding-report-jeffrey-epstein-0110" target="_blank" rel="noopener">[5] MIT: Goodwin Procter Report</a><br><a class="source-link" href="https://epsteinweb.org/marvin-minsky/" target="_blank" rel="noopener">[6] Epstein Web Tracker: Minsky</a></div>
       </div>
     </div>
-
     <div class="node">
       <div class="node-marker era-dark"></div>
       <div class="node-content">
-        <div class="node-year">2014 – 2015 — Übernahme</div>
-        <div class="node-title">Epstein übernimmt Bitcoin-Entwicklung</div>
-        <div class="node-body">
-          Die Bitcoin Foundation kollabiert. Epstein finanziert über Joi Ito die <strong>MIT Digital Currency Initiative</strong> ($525.000) und investiert in <strong>Blockstream</strong> ($500.000) und <strong>Coinbase</strong> ($3 Mio). Drei Bitcoin Core-Entwickler wechseln ans MIT. Ito an Epstein: <strong>„This is a big win for us."</strong>
-          <br><a class="source-link" href="https://www.dlnews.com/articles/people-culture/epstein-files-reveal-desire-to-steer-bitcoin-via-its-developers/" target="_blank" rel="noopener">[7] DL News: Epstein steers Bitcoin</a>
-          <br><a class="source-link" href="https://cryptovalleyjournal.com/hot-topics/news/epstein-files-document-connections-to-bitcoin-infrastructure/" target="_blank" rel="noopener">[8] Crypto Valley Journal</a>
-          <br><a class="source-link" href="https://www.washingtonpost.com/technology/2026/02/03/epstein-files-coinbase-silicon-valley/" target="_blank" rel="noopener">[9] Washington Post: Coinbase</a>
-        </div>
+        <div class="node-year">2014 – 2015 — The Takeover</div>
+        <div class="node-title">Epstein Captures Bitcoin Development</div>
+        <div class="node-body">The Bitcoin Foundation collapses. Epstein funds the <strong>MIT Digital Currency Initiative</strong> ($525,000) through Joi Ito and invests in <strong>Blockstream</strong> ($500,000) and <strong>Coinbase</strong> ($3M). Three Bitcoin Core developers move to MIT. Ito emails Epstein: <strong>"This is a big win for us."</strong><br><a class="source-link" href="https://www.dlnews.com/articles/people-culture/epstein-files-reveal-desire-to-steer-bitcoin-via-its-developers/" target="_blank" rel="noopener">[7] DL News: Epstein steers Bitcoin</a><br><a class="source-link" href="https://cryptovalleyjournal.com/hot-topics/news/epstein-files-document-connections-to-bitcoin-infrastructure/" target="_blank" rel="noopener">[8] Crypto Valley Journal</a><br><a class="source-link" href="https://www.washingtonpost.com/technology/2026/02/03/epstein-files-coinbase-silicon-valley/" target="_blank" rel="noopener">[9] Washington Post: Coinbase</a></div>
       </div>
     </div>
-
     <div class="node">
       <div class="node-marker era-dark"></div>
       <div class="node-content">
-        <div class="node-year">2015 — Das Netzwerk</div>
-        <div class="node-title">Dinner mit den Tech-Göttern</div>
-        <div class="node-body">
-          Reid Hoffman lädt Epstein und Joi Ito zu einem Dinner mit <strong>Elon Musk, Mark Zuckerberg und Peter Thiel</strong>. Ito schlägt ein Meeting vor mit Bitcoin Core-Entwicklern, Quantenphysikern und Epstein über <strong>„Geld und die Zukunft der Finanzen"</strong>. Epstein investiert $40 Mio in Thiels Valar Ventures.
-          <br><a class="source-link" href="https://www.nbcnews.com/tech/tech-news/jeffrey-epstein-files-reveal-deep-tech-ties-musk-gates-rcna257092" target="_blank" rel="noopener">[10] NBC News: Epstein Tech Ties</a>
-          <br><a class="source-link" href="https://bylinetimes.com/2025/12/04/how-epstein-saved-bitcoin-and-accessed-trumps-tech-inner-circle/" target="_blank" rel="noopener">[11] Byline Times: How Epstein Saved Bitcoin</a>
-        </div>
+        <div class="node-year">2015 — The Network</div>
+        <div class="node-title">Dinner with the Tech Gods</div>
+        <div class="node-body">Reid Hoffman invites Epstein and Joi Ito to dinner with <strong>Elon Musk, Mark Zuckerberg, and Peter Thiel</strong>. Ito proposes a meeting with Bitcoin Core developers, quantum physicists, and Epstein to discuss <strong>"money and the future of finance."</strong> Epstein invests $40M in Thiel's Valar Ventures.<br><a class="source-link" href="https://www.nbcnews.com/tech/tech-news/jeffrey-epstein-files-reveal-deep-tech-ties-musk-gates-rcna257092" target="_blank" rel="noopener">[10] NBC News: Epstein Tech Ties</a><br><a class="source-link" href="https://bylinetimes.com/2025/12/04/how-epstein-saved-bitcoin-and-accessed-trumps-tech-inner-circle/" target="_blank" rel="noopener">[11] Byline Times: How Epstein Saved Bitcoin</a></div>
       </div>
     </div>
-
   </section>
-
-  <!-- STATS -->
   <section class="connections">
-    <h2>Die Zahlen</h2>
+    <h2>The Numbers</h2>
     <div class="card-grid">
-
-      <div class="card card-money">
-        <div class="card-label">Finanzierung</div>
-        <div class="card-stat">$850K</div>
-        <div class="card-desc">Epsteins dokumentierte Spenden an MIT (2002–2017), darunter KI- und Crypto-Forschung <a href="https://news.mit.edu/2020/mit-releases-results-fact-finding-report-jeffrey-epstein-0110" target="_blank" rel="noopener">[5]</a></div>
-      </div>
-
-      <div class="card card-code">
-        <div class="card-label">Code-Kontrolle</div>
-        <div class="card-stat">74.8%</div>
-        <div class="card-desc">Des Bitcoin Core-Codes wurde committed nachdem Epstein de-facto Hauptförderer wurde <a href="https://futurism.com/future-society/cryptocurrency-jeffrey-epstein-bitcoin" target="_blank" rel="noopener">[12]</a></div>
-      </div>
-
-      <div class="card card-network">
-        <div class="card-label">Netzwerk</div>
-        <div class="card-stat">20+</div>
-        <div class="card-desc">Prominente Tech-Executives in direktem Kontakt mit Epstein <a href="https://www.nbcnews.com/tech/tech-news/jeffrey-epstein-files-reveal-deep-tech-ties-musk-gates-rcna257092" target="_blank" rel="noopener">[10]</a></div>
-      </div>
-
-      <div class="card card-money">
-        <div class="card-label">Crypto-Investments</div>
-        <div class="card-stat">$4M+</div>
-        <div class="card-desc">Dokumentierte Investments in Blockstream, Coinbase und Crypto-Infrastruktur <a href="https://cryptovalleyjournal.com/hot-topics/news/epstein-files-document-connections-to-bitcoin-infrastructure/" target="_blank" rel="noopener">[8]</a></div>
-      </div>
-
-      <div class="card card-network">
-        <div class="card-label">Dinner-Gäste</div>
-        <div class="card-stat">Musk · Zuck · Thiel</div>
-        <div class="card-desc">Alle drei saßen 2015 mit Epstein am Tisch <a href="https://bylinetimes.com/2025/12/04/how-epstein-saved-bitcoin-and-accessed-trumps-tech-inner-circle/" target="_blank" rel="noopener">[11]</a></div>
-      </div>
-
-      <div class="card card-code">
-        <div class="card-label">Abstammung</div>
-        <div class="card-stat">Golem → KI</div>
-        <div class="card-desc">Minsky — Vater der KI — behauptete Nachkomme des Golem-Schöpfers Rabbi Loew zu sein <a href="https://forward.com/culture/film-tv/398389/the-secret-jewish-history-of-2001-a-space-odyssey/" target="_blank" rel="noopener">[3]</a></div>
-      </div>
-
+      <div class="card card-money"><div class="card-label">Funding</div><div class="card-stat">$850K</div><div class="card-desc">Epstein's documented donations to MIT (2002–2017), funding AI and crypto research <a href="https://news.mit.edu/2020/mit-releases-results-fact-finding-report-jeffrey-epstein-0110" target="_blank" rel="noopener">[5]</a></div></div>
+      <div class="card card-code"><div class="card-label">Code Control</div><div class="card-stat">74.8%</div><div class="card-desc">Of Bitcoin Core code was committed after Epstein became its de facto primary benefactor <a href="https://futurism.com/future-society/cryptocurrency-jeffrey-epstein-bitcoin" target="_blank" rel="noopener">[12]</a></div></div>
+      <div class="card card-network"><div class="card-label">Network</div><div class="card-stat">20+</div><div class="card-desc">Prominent tech executives in direct contact with Epstein per NBC News review <a href="https://www.nbcnews.com/tech/tech-news/jeffrey-epstein-files-reveal-deep-tech-ties-musk-gates-rcna257092" target="_blank" rel="noopener">[10]</a></div></div>
+      <div class="card card-money"><div class="card-label">Crypto Investments</div><div class="card-stat">$4M+</div><div class="card-desc">Documented Epstein investments in Blockstream, Coinbase, and crypto infrastructure <a href="https://cryptovalleyjournal.com/hot-topics/news/epstein-files-document-connections-to-bitcoin-infrastructure/" target="_blank" rel="noopener">[8]</a></div></div>
+      <div class="card card-network"><div class="card-label">Dinner Guests</div><div class="card-stat">Musk · Zuck · Thiel</div><div class="card-desc">All three sat with Epstein in 2015 discussing "the future of finance" <a href="https://bylinetimes.com/2025/12/04/how-epstein-saved-bitcoin-and-accessed-trumps-tech-inner-circle/" target="_blank" rel="noopener">[11]</a></div></div>
+      <div class="card card-code"><div class="card-label">Lineage</div><div class="card-stat">Golem → AI</div><div class="card-desc">Minsky — father of AI — claimed descent from Golem creator Rabbi Loew <a href="https://forward.com/culture/film-tv/398389/the-secret-jewish-history-of-2001-a-space-odyssey/" target="_blank" rel="noopener">[3]</a></div></div>
     </div>
   </section>
-
-  <!-- FULL SOURCE LIST -->
   <section class="sources">
-    <h3>Quellenverzeichnis</h3>
+    <h3>Sources</h3>
     <ol>
       <li><a href="https://en.wikipedia.org/wiki/Judah_Loew_ben_Bezalel" target="_blank" rel="noopener">Wikipedia — Rabbi Judah Loew ben Bezalel</a></li>
-      <li><a href="https://swarajyamag.com/books/the-golem-and-artificial-intelligence-a-churning-of-folklore-and-science" target="_blank" rel="noopener">Swarajya Magazine — "The Golem and Artificial Intelligence" (Minsky Bar-Mitzwa Anecdote, Brian Lancaster)</a></li>
-      <li><a href="https://forward.com/culture/film-tv/398389/the-secret-jewish-history-of-2001-a-space-odyssey/" target="_blank" rel="noopener">The Forward — "The Secret Jewish History of 2001: A Space Odyssey" (Minsky → Rabbi Loew)</a></li>
+      <li><a href="https://swarajyamag.com/books/the-golem-and-artificial-intelligence-a-churning-of-folklore-and-science" target="_blank" rel="noopener">Swarajya Magazine — "The Golem and Artificial Intelligence" (Minsky Bar Mitzvah anecdote, Brian Lancaster)</a></li>
+      <li><a href="https://forward.com/culture/film-tv/398389/the-secret-jewish-history-of-2001-a-space-odyssey/" target="_blank" rel="noopener">The Forward — "The Secret Jewish History of 2001: A Space Odyssey" (Minsky → Rabbi Loew claim)</a></li>
       <li><a href="https://en.wikipedia.org/wiki/Marvin_Minsky" target="_blank" rel="noopener">Wikipedia — Marvin Minsky</a></li>
       <li><a href="https://news.mit.edu/2020/mit-releases-results-fact-finding-report-jeffrey-epstein-0110" target="_blank" rel="noopener">MIT News — Goodwin Procter Fact-Finding Report on Epstein Donations (2020)</a></li>
       <li><a href="https://epsteinweb.org/marvin-minsky/" target="_blank" rel="noopener">Epstein Web Tracker — Marvin Minsky Connection Graph</a></li>
@@ -648,39 +111,17 @@
       <li><a href="https://www.washingtonpost.com/technology/2026/02/03/epstein-files-coinbase-silicon-valley/" target="_blank" rel="noopener">Washington Post — "Jeffrey Epstein made lucrative investment in crypto exchange Coinbase" (Feb 2026)</a></li>
       <li><a href="https://www.nbcnews.com/tech/tech-news/jeffrey-epstein-files-reveal-deep-tech-ties-musk-gates-rcna257092" target="_blank" rel="noopener">NBC News — "Jeffrey Epstein files reveal deep tech ties, from Musk to Gates" (Feb 2026)</a></li>
       <li><a href="https://bylinetimes.com/2025/12/04/how-epstein-saved-bitcoin-and-accessed-trumps-tech-inner-circle/" target="_blank" rel="noopener">Byline Times — "How Epstein Saved Bitcoin – and Accessed Trump's Tech Inner Circle" (Dec 2025)</a></li>
-      <li><a href="https://futurism.com/future-society/cryptocurrency-jeffrey-epstein-bitcoin" target="_blank" rel="noopener">Futurism — "Crypto Bros Nauseated After Realizing Bitcoin Itself Was Funded by Jeffrey Epstein" (Feb 2026)</a></li>
+      <li><a href="https://futurism.com/future-society/cryptocurrency-jeffrey-epstein-bitcoin" target="_blank" rel="noopener">Futurism — "Crypto Bros Nauseated After Realizing Bitcoin Was Funded by Jeffrey Epstein" (Feb 2026)</a></li>
     </ol>
   </section>
-
-  <!-- CLOSING -->
   <section class="closing">
-    <blockquote>
-      „Die Erschaffung von KI durch Code, mit Silizium als Basis, teilt Ähnlichkeiten mit der Erschaffung des Golem durch eine Beschwörung, mit Erde als Basis."
-    </blockquote>
-    <div class="attribution">— Prof. Brian Lancaster, „The Essence of Kabbalah"</div>
-
-    <div class="footer-note" style="margin-top: 50px;">
-      <p>
-        Diese Seite stellt ausschließlich dokumentierte Verbindungen dar.<br>
-        Die Interpretation bleibt dem Leser überlassen.<br><br>
-        Jede Behauptung ist mit einer primären oder sekundären Quelle verlinkt.<br>
-        Fakten prüfen. Selbst denken. Quellen lesen.
-      </p>
-    </div>
+    <blockquote>"The creation of AI through code, with silicon as its base, shares similarities with the creation of the Golem through an incantation, with soil as its base."</blockquote>
+    <div class="attribution">— Prof. Brian Lancaster, "The Essence of Kabbalah"</div>
+    <div class="footer-note" style="margin-top:50px"><p>This page presents documented connections only.<br>Interpretation is left to the reader.<br><br>Every claim is linked to a primary or secondary source.<br>Check the facts. Think for yourself. Read the sources.</p></div>
   </section>
-
 </div>
-
 <script>
-  // Dynamic X share URL
-  document.getElementById('shareX').addEventListener('click', function(e) {
-    e.preventDefault();
-    const text = `Die Golem-Pipeline: Marvin Minsky — Vater der KI — behauptete Nachkomme des kabbalistischen Golem-Schöpfers zu sein. Epstein finanzierte seine Forschung am MIT. 74.8% des Bitcoin-Codes wurde unter Epsteins Förderung committed.\n\nAlle Quellen verlinkt 👇`;
-    const url = window.location.href;
-    const tweetUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
-    window.open(tweetUrl, '_blank', 'width=600,height=400');
-  });
+document.getElementById('shareX').addEventListener('click',function(e){e.preventDefault();const text=`The Golem Pipeline 🧵\n\nMarvin Minsky — father of AI — claimed descent from Rabbi Loew, the Kabbalist who created the Golem.\n\nEpstein funded Minsky's research at MIT.\n\n74.8% of Bitcoin Core code was committed under Epstein's patronage.\n\nAll sourced from DOJ files & MIT reports 👇`;const url=window.location.href;window.open(`https://x.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`,'_blank','width=600,height=400')});
 </script>
-
 </body>
 </html>
