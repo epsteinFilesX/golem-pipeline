@@ -1,16 +1,24 @@
-# Die Golem-Pipeline
+# The Golem Pipeline
 
-**Von kabbalistischer Schöpfung zur künstlichen Intelligenz — eine dokumentierte Timeline**
+**From Kabbalistic creation to artificial intelligence — a documented timeline**
 
-Eine interaktive Infografik, die dokumentierte Verbindungen zwischen kabbalistischer Tradition, der Entstehung künstlicher Intelligenz und Jeffrey Epsteins Tech-/Crypto-Netzwerk darstellt.
+An interactive infographic tracing documented connections between Kabbalistic tradition, the birth of artificial intelligence, and Jeffrey Epstein's tech/crypto network.
 
-## Was ist das?
+## What Is This?
 
-Eine einzelne HTML-Seite (kein Build-Prozess nötig), die eine visuelle Timeline zeigt — von Rabbi Judah Loews Golem (1525) über Marvin Minskys Gründung des MIT AI Lab bis zu Epsteins dokumentierter Rolle in der Bitcoin-Entwicklung.
+A single HTML page (no build process needed) showing a visual timeline — from Rabbi Judah Loew's Golem (1525) through Marvin Minsky's founding of the MIT AI Lab to Epstein's documented role in Bitcoin development.
 
-**Jede Behauptung ist mit Primär- oder Sekundärquellen verlinkt.**
+**Every claim is linked to primary or secondary sources.**
 
-## Quellen
+## Key Facts
+
+- **Marvin Minsky**, father of AI, claimed descent from Rabbi Judah Loew — the Kabbalist famous for creating the Golem
+- **Epstein's earliest documented MIT donation** ($100K in 2002) funded Minsky's research
+- **74.8%** of Bitcoin Core code was committed after Epstein became its de facto primary benefactor
+- **$4M+** in documented Epstein investments across Blockstream, Coinbase, and crypto infrastructure
+- In 2015, Epstein sat at dinner with **Musk, Zuckerberg, and Thiel** discussing "the future of finance"
+
+## Sources
 
 - DOJ Epstein Files (Jan 2026)
 - MIT Goodwin Procter Fact-Finding Report (2020)
@@ -18,32 +26,36 @@ Eine einzelne HTML-Seite (kein Build-Prozess nötig), die eine visuelle Timeline
 - Forward Magazine, Swarajya Magazine
 - Prof. Brian Lancaster, *The Essence of Kabbalah*
 
-## Deployment
+## Deploy on GitHub Pages (Free, 5 Minutes)
 
-### GitHub Pages (kostenlos)
+1. Fork or clone this repo
+2. Go to **Settings → Pages**
+3. Under "Source" select **Deploy from a branch**
+4. Choose `main` branch and `/ (root)`
+5. Click **Save**
+6. Live at `https://YOUR-USERNAME.github.io/golem-pipeline/`
 
-1. Fork oder clone dieses Repo
-2. Gehe zu **Settings → Pages**
-3. Unter "Source" wähle **Deploy from a branch**
-4. Wähle `main` branch und `/ (root)`
-5. Klick **Save**
-6. Deine Seite ist live unter `https://DEIN-USERNAME.github.io/golem-pipeline/`
+## Alternative: Netlify (Free)
 
-### Alternativ: Netlify (kostenlos)
-
-1. Gehe zu [netlify.com](https://netlify.com)
+1. Go to [netlify.com](https://netlify.com)
 2. "Add new site" → "Import an existing project"
-3. Verbinde dein GitHub Repo
-4. Deploy — fertig
+3. Connect your GitHub repo
+4. Deploy — done
 
-## Lokal testen
+## Run Locally
 
-Einfach `index.html` im Browser öffnen. Kein Server nötig.
+Just open `index.html` in your browser. No server needed.
 
-## Wichtiger Hinweis
+## After Deployment
 
-Diese Seite stellt dokumentierte Verbindungen dar. Die Interpretation bleibt dem Leser überlassen. Fakten prüfen. Selbst denken. Quellen lesen.
+1. **OG Image**: Take a screenshot of the page, upload it (e.g. Imgur), and replace `https://i.imgur.com/placeholder.png` in the HTML `<meta>` tags
+2. **og:url**: Add your GitHub Pages URL to the `og:url` meta tag
+3. **Share**: Use the built-in "Share on X" button or post screenshots with the link in your first reply
 
-## Lizenz
+## Important
 
-CC BY 4.0 — Teilen und Bearbeiten erlaubt mit Namensnennung.
+This page presents documented connections only. Interpretation is left to the reader. Check the facts. Think for yourself. Read the sources.
+
+## License
+
+CC BY 4.0 — Share and adapt with attribution.
